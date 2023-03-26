@@ -81,7 +81,11 @@ class TestAndroidDeviceCloud(AppiumConfig):
 
         self.driver.find_element(AppiumBy.XPATH, "//*[@text='OK']").click()
 
-        # send password as welcome123
-        # send email as test123
-        # click on create
-        # assert the error message of mail id
+        self.driver.find_element(AppiumBy.XPATH, "//android.widget.EditText[@content-desc='Email address']").send_keys(
+            "test123")
+        self.driver.find_element(AppiumBy.XPATH, "//android.widget.EditText[@content-desc='Password']").send_keys(
+            "welcome123")
+        self.driver.find_element(AppiumBy.XPATH, "//android.widget.TextView[@text='CREATE']").click()
+        actaul_error = self.driver.find_element(AppiumBy.XPATH, "//android.widget.TextView[@text='There was an "
+                                                                "issue signing in']").text
+        assert_that(actaul_error).is_equal_to("There was an issue signing in")
