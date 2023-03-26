@@ -10,8 +10,8 @@ des_cap={
         "buildName": "browserstack-build-1",
         "sessionName": "BStack first_test",
         # Set your access credentials
-        "userName": "dinakaranbalaji1",
-        "accessKey": "6yXRE4nK1fyvTHWA2kPD"
+        "userName": "tobimylan_1pFN9B",
+        "accessKey": "xYxViSzMdVNFtoqV4zFi"
     }
 }
 
